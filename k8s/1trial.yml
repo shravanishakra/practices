@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: pod # https://kubernetes.io/docs/concepts/workloads/pods/
+metadata: #give component deployment or pod a key valu format and assing to instance details
+  name: my-pod
+  labels:
+    app: nginx
+
+# container created 
+spec: # diifernt specific attribute too only use apply deployment and details of pods
+  containers:
+    - name: my-pod
+      image: nginx:latest
+      ports:
+        - containerport: 80
+---
+
+# services created
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysvr
+spec:
+  selector:
+    app: nginx
+  ports:
+    - port: 80
+      targetPort: 80
+
+
