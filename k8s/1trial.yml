@@ -23,11 +23,11 @@ spec: # diifernt specific attribute too only use apply deployment and details of
   apiVersion: v1
   kind: Service
   metadata:
-  name: svr 
+   name: my-service
   spec:
-  selector:
-    app: nginx
-  ports:
+    selector:
+      app: nginx
+    ports:
         - port: 80
           targetPort: 80
 
