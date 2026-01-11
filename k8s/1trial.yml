@@ -17,6 +17,7 @@ spec: # diifernt specific attribute too only use apply deployment and details of
       limits:
            memory: "512Mi" 
            cpu: "500m"
+---
 
 # services created
   apiVersion: v1
